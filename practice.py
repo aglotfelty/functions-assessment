@@ -114,7 +114,9 @@ def print_sign(integer):
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
+def is_divisible_by_three(integer):
 
+    return integer % 3 == 0
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
