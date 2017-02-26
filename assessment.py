@@ -196,6 +196,14 @@ def calculate_price(base_price, state_abbreviation, tax_percentage=.05):
 # isn't something we've discussed yet in class; you might need to google how to
 # write a Python function that takes in an arbitrary number of arguments.
 
+def append_args_to_list(lst, *args):
+    """Appends any number of arguments to a given list"""
+
+    for arg in args:
+        list_length = len(lst)
+        lst[list_length:list_length] = [arg]
+
+    return lst
 
 # 2. Make a new function with a nested inner function.
 # The outer function will take in a word.
