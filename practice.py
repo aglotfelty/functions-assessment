@@ -145,10 +145,33 @@ def total_meal_price(meal_price, tip_percent=.15):
 #    argument and returns two pieces of information as strings --- "Positive"
 #    or "Negative" and "Even" or "Odd". The two strings should be returned in
 #    a list.
+
+def sign_and_parity(integer):
+    """Returns a list containing whether the integer is positive or negative 
+        and even or odd.
+    """
+    integer_information = []
+
+    if integer % 2 == 0:
+        integer_information.append('Even')
+    else:
+        integer_information.append('Odd')
+
+    if integer >= 0:
+        integer_information.append('Positive')
+    else:
+        integer_information.append('Negative')
+
+    return integer_information
+
 #
 #    Then, write code that shows the calling of this function on a number and
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
+
+two_info = sign_and_parity(2)
+parity = two_info[0]
+sign = two_info[1]
 
 
 ###############################################################################
@@ -158,6 +181,11 @@ def total_meal_price(meal_price, tip_percent=.15):
 # 1. Write a function that takes a name and a job title as parameters, making
 #    it so the job title defaults to "Engineer" if a job title is not passed
 #    in. Return the person's title and name in one string.
+
+def full_title(name, job_title="Engineer"):
+    """Returns a person's title and name"""
+
+    return job_title + " " + name
 
 # 2. Given a recipient name & job title and a sender name, print the following
 #    letter:
