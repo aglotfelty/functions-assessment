@@ -81,7 +81,7 @@ def generate_full_name(first_name, last_name):
 #        (a) evaluates to.
 
 def print_greeting(hometown, first_name, last_name):
-    """Prints greeting"""
+    """Prints a special greeting based on a person's hometown"""
 
     full_name = generate_full_name(first_name, last_name)
 
@@ -105,7 +105,10 @@ def print_greeting(hometown, first_name, last_name):
 def is_berry(fruit):
     """Determines if fruit is a berry"""
 
-    pass
+    berries = ['strawberry', 'cherry', 'blackberry']
+
+    return fruit in berries
+
 
 
 # (b) Write another function, shipping_cost(), which calculates shipping cost
