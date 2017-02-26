@@ -94,9 +94,10 @@ def is_my_hometown(town_name):
 def generate_full_name(first_name, last_name):
     """Returns a person's full name given their first and last names"""
 
-#ADD CHECK TO MAKE SURE ARGUEMENTS ARE STRINGS (NOT INTS OR BOOLS) 
-#ALSO CHECK TO MAKE SURE NOT EMPTY STRINGS  
-    return first_name + " " + last_name
+    return '%s %s' % (first_name, last_name)
+
+    # ALTERNATE SOLUTION:
+    # return first_name + " " + last_name
 
 #    (c) Write a function that takes a home town, a first name, and a last name
 #        as arguments, calls both functions from part (a) and (b) and prints
@@ -159,6 +160,7 @@ def append_to_list(lst, num):
     """
 
     new_list = lst + [num]
+
     return new_list
 
 
@@ -185,26 +187,26 @@ def calculate_price(base_price, state_abbreviation, tax_percentage=.05):
 
     if state_abbreviation == 'CA':
         recycling_fee = price_with_tax * 0.03
-        total_price = price_with_tax + recycling_fee
+        total_cost = price_with_tax + recycling_fee
 
     elif state_abbreviation == 'PA':
         highway_safety_fee = 2
-        total_price = price_with_tax + highway_safety_fee
+        total_cost = price_with_tax + highway_safety_fee
 
     elif state_abbreviation == 'MA':
         fee_if_price_under_100 = 1
         fee_if_price_100_or_over = 3
 
         if base_price < 100:
-            total_price = price_with_tax + fee_if_price_under_100
+            total_cost = price_with_tax + fee_if_price_under_100
 
         else:
-            total_price = price_with_tax + fee_if_price_100_or_over
+            total_cost = price_with_tax + fee_if_price_100_or_over
     
     else:
-        total_price = price_with_tax
+        total_cost = price_with_tax
 
-    return total_price
+    return total_cost
 
 
 ###############################################################################
@@ -246,7 +248,7 @@ def multiply_a_word_by_three(word):
 
     word_multiplied = multiply_by_three(word)
 
-    return word, word_multiplied
+    return (word, word_multiplied)
 
 
 # Example:
