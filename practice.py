@@ -115,12 +115,22 @@ def print_sign(integer):
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
 def is_divisible_by_three(integer):
+    """Returns True if integer is divisible by three and False otherwise"""
 
     return integer % 3 == 0
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
+def num_spaces(sentence):
+    """Returns the number of spaces in a sentence"""
 
+    spaces = 0
+
+    for character in sentence:
+        if character == ' ':
+            spaces = spaces + 1
+
+    return spaces
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
 #    and a tip percentage. It should return the total amount paid
