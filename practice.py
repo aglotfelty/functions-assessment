@@ -196,6 +196,11 @@ def full_title(name, job_title="Engineer"):
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
 
+def write_letter(name, job_title, sender_name):
+    """Prints a letter"""
+
+    print "Dear " + full_title(name, job_title) + ", I think you are amazing! Sincerely,", sender_name
+
 
 ###############################################################################
 
