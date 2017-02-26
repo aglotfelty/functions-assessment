@@ -154,9 +154,32 @@ def append_to_list(lst, num):
 #    Your function should return the total cost of the item, including tax and
 #    fees.
 
-def calculate_price(FILL_ME_IN):
+def calculate_price(base_price, state_abbreviation, tax_percentage=.05):
 
-    pass
+    price_with_tax = base_price + base_price * tax_percentage
+
+    if state_abbreviation == 'CA':
+        # 3% recycling fee (added after tax is calculated)
+        recycling_fee = price_with_tax * 0.03
+        total_price = price_with_tax + recycling_fee
+
+    elif state_abbreviation == 'PA':
+        # $2 highway safety fee (added after tax is calculated)
+        highway_safety_fee = 2
+        total_price = price_with_tax + highway_safety_fee
+
+    elif state_abbreviation == 'MA':
+        # $1 commonwealth fund fee for items with base price under $100
+        # $3 commonwealth fund fee for items $100 or more
+        # fees added after tax is calculated
+        if base_price < 100:
+            total_price = price_with_tax + 1
+        else:
+            total_price = price_with_tax + 3
+    else:
+        total_price = price_with_tax
+
+    return total_price
 
 
 ###############################################################################
