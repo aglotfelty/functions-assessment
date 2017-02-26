@@ -155,7 +155,8 @@ def shipping_cost(fruit):
 
 def append_to_list(lst, num):
     """Creates a new list consisting of the old list with the given number
-       added to the end."""
+    added to the end.
+    """
 
     new_list = lst + [num]
     return new_list
@@ -183,23 +184,23 @@ def calculate_price(base_price, state_abbreviation, tax_percentage=.05):
     price_with_tax = base_price + base_price * tax_percentage
 
     if state_abbreviation == 'CA':
-        # 3% recycling fee (added after tax is calculated)
         recycling_fee = price_with_tax * 0.03
         total_price = price_with_tax + recycling_fee
 
     elif state_abbreviation == 'PA':
-        # $2 highway safety fee (added after tax is calculated)
         highway_safety_fee = 2
         total_price = price_with_tax + highway_safety_fee
 
     elif state_abbreviation == 'MA':
-        # $1 commonwealth fund fee for items with base price under $100
-        # $3 commonwealth fund fee for items $100 or more
-        # fees added after tax is calculated
+        fee_if_price_under_100 = 1
+        fee_if_price_100_or_over = 3
+
         if base_price < 100:
-            total_price = price_with_tax + 1
+            total_price = price_with_tax + fee_if_price_under_100
+
         else:
-            total_price = price_with_tax + 3
+            total_price = price_with_tax + fee_if_price_100_or_over
+    
     else:
         total_price = price_with_tax
 
