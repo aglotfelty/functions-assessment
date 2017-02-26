@@ -101,7 +101,15 @@ def repeat_string(string, integer):
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
 #    If the integer is zero, print "Zero".
+def print_sign(integer):
+    """Prints whether an integer is higher than, lower than or equal to zero"""
 
+    if integer > 0:
+        print "Higher than 0"
+    elif integer < 0:
+        print "Lower than 0"
+    else:
+        print "Zero"
 
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
