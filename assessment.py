@@ -7,6 +7,21 @@ go below this docstring.
 PART ONE: Write your own function declarations - Part 1 questions aren't
 included in the doctest.
 
+    >>> is_my_hometown('Chelmsford')
+    True
+
+    >>> is_my_hometown('San Francisco')
+    False
+
+    >>> generate_full_name('Allie', 'Glotfelty')
+    'Allie Glotfelty'
+
+    >>> print_greeting('Chelmsford', 'Pam', 'Holmes')
+    Hi, Pam Holmes, we're from the same place!
+
+    >>> print_greeting('Wilton', 'Bob', 'Glotfelty')
+    Hi, Bob Glotfelty, where are you from?
+
 PART TWO:
 
     >>> is_berry("blackberry")
@@ -44,6 +59,15 @@ PART TWO:
 
 PART THREE: Write your own function declarations - Part 3 questions aren't
 included in the doctest.
+
+    >>> append_args_to_list([1, 2, 3], 4, 5, 6, 7, 8)
+    [1, 2, 3, 4, 5, 6, 7, 8]
+
+    >>> append_args_to_list(['allie', 'glotfelty'], 2, 3, True)
+    ['allie', 'glotfelty', 2, 3, True]
+
+    >>> multiply_a_word_by_three('flower')
+    ('flower', 'flowerflowerflower')
 
 """
 
@@ -222,8 +246,6 @@ def multiply_a_word_by_three(word):
     word_multiplied = multiply_by_three(word)
 
     return word, word_multiplied
-
-
 
 
 # Example:
