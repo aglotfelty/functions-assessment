@@ -136,7 +136,10 @@ def num_spaces(sentence):
 #    and a tip percentage. It should return the total amount paid
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
+def total_meal_price(meal_price, tip_percent=.15):
+    """Calculates a total amount to pay based on meal price and tip"""
 
+    return meal_price + meal_price * tip_percent
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
 #    argument and returns two pieces of information as strings --- "Positive"
