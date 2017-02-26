@@ -88,12 +88,15 @@ def say_hi(name):
 #    multiplies them together. Print the result.
 def print_product(integer1, integer2):
     """Prints the product of two integers"""
-    
-    return integer1 * integer2
+
+    print integer1 * integer2
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
+def repeat_string(string, integer):
+    """Prints a string a given number of times"""
 
+    print string * integer
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
