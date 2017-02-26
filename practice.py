@@ -170,9 +170,9 @@ def sign_and_parity(integer):
 #    it's even or odd). Print sign and parity.
 
 two_info = sign_and_parity(2)
-parity = two_info[0]
-sign = two_info[1]
-
+parity, sign = two_info
+print sign
+print parity
 
 ###############################################################################
 
@@ -185,7 +185,10 @@ sign = two_info[1]
 def full_title(name, job_title="Engineer"):
     """Returns a person's title and name"""
 
-    return job_title + " " + name
+    return "%s %s" % (job_title, name)
+
+    # ALTERNATE SOLUTION:
+    # return job_title + " " + name
 
 # 2. Given a recipient name & job title and a sender name, print the following
 #    letter:
@@ -199,7 +202,10 @@ def full_title(name, job_title="Engineer"):
 def write_letter(name, job_title, sender_name):
     """Prints a letter"""
 
-    print "Dear " + full_title(name, job_title) + ", I think you are amazing! Sincerely,", sender_name
+    title_and_name = full_title(name, job_title)
+
+    print "Dear %s, I think you are amazing! Sincerely, %s" % \
+            (title_and_name, sender_name)
 
 
 ###############################################################################
