@@ -212,6 +212,20 @@ def append_args_to_list(lst, *args):
 # Output will be the original function argument and the result of the inner
 # function.
 
+def multiply_a_word_by_three(word):
+    """Prints a given word three times"""
+
+    def multiply_by_three(anything):
+        """Returns anything three times"""
+        return anything * 3
+
+    word_multiplied = multiply_by_three(word)
+
+    return word, word_multiplied
+
+
+
+
 # Example:
 
 #>>> outer("Balloonicorn")
